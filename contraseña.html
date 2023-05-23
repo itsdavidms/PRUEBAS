@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<title>
+		PEDIRLE AL USUARIO LA CONTRASEÑA CORRECTA
+	</title>
+</head>
+<body>
+	<script>
+		let intentos=0;
+		let contra=1234;
+		contra=prompt("Introduce una contrasena de 4 digitos: ","");
+		while(contra!=1234){
+			if(intentos<=3){
+				contra=prompt("Vuelve a intentarlo","");
+					intentos++
+				}
+			else{
+				alert("ERROR. Has superado todos los intentos");
+				}
+			}
+		alert("Bien. Has introducido la contrasena correcta","");
+	</script>
+</body>
+</html>

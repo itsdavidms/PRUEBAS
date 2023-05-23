@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Pokemón</title>
+	<style>
+		body
+		{
+		text-align:center; color:#191970; font-size:20px; background:#FFFFE0; 
+		}
+	</style>
+</head>
+<body>
+	<h3>· P O K E M Ó N ·</h3>
+	<script>
+		let pokemon=["PIKACHU","CHARIZARD","ONIX","SQUIRTLE","MEWTWO"];
+		let imagenPokemon=new Array();
+		imagenPokemon[0]="<img src='https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png' width=20% height=20%/>";
+		imagenPokemon[1]="<img src='https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png' width=20% height=20%/>";
+		imagenPokemon[2]="<img src='https://assets.pokemon.com/assets/cms2/img/pokedex/full/095.png' width=20% height=20%/>";
+		imagenPokemon[3]="<img src='https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png' width=20% height=20%/>";
+		imagenPokemon[4]="<img src='https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png' width=20% height=20%/>";
+		pokemonElegido=[Math.floor(Math.random()*pokemon.length)];
+		let salida=pokemon[pokemonElegido];
+		document.write(salida);
+		document.write("<br/>"+imagenPokemon[pokemonElegido]);
+		let fuerza=Math.floor(Math.random()*20)+1;
+		document.write(`<br/><meter value="${fuerza}" min="0" max="20"></meter><br/>`);
+		document.write("<br/>Fuerza:  "+fuerza);
+		let vida=Math.floor(Math.random()*100)+1;
+		if(vida<33)
+			document.write(`<br/><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1ac14ec7-6a85-4c79-b22b-edfe26528bf7/d5yf5xm-bdc8a5d7-9b9d-49b2-b524-058a0a1f5637.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFhYzE0ZWM3LTZhODUtNGM3OS1iMjJiLWVkZmUyNjUyOGJmN1wvZDV5ZjV4bS1iZGM4YTVkNy05YjlkLTQ5YjItYjUyNC0wNThhMGExZjU2MzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.CmpWX0kVsrv2NLV7N0124i2-DD4C07z4-Q9qoUEqC0g" width="100" height="50"/>`);
+				else
+					if(vida<=66)
+						document.write(`<br/><br/><img src="https://img2.freepng.es/20180325/lhq/kisspng-material-yellow-rectangle-buttons-5ab7c6ee4892f0.2014051615219934542973.jpg" width="80" height="10"/><br/>`);
+						else
+							document.write(`<br/><br/><img src="https://img2.freepng.es/20180301/dsw/kisspng-brand-area-rectangle-green-green-button-5a98cd695afc48.8737728815199634973727.jpg" width="80" height="10"/><br/>`);
+		document.write("<br/>Vida: "+vida);
+	</script>
+</body>
+</html>
